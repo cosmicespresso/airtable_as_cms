@@ -3,9 +3,9 @@
 Boilerplate code for a frontend that uses Airtable as a CMS. Built using `create-react-app`.  
 
 
-## How to install 
+## How to run locally
 
-`yarn install`
+`yarn install` and `yarn start`
 
 
 You have to create a `.env` file in the root directory, in which you will list the following parameters: 
