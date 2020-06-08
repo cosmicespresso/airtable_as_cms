@@ -1,8 +1,10 @@
 ## Airtable as CMS
 
-Boilerplate code for a frontend that uses [Airtable](https://airtable.com/) as a CMS. Built using `create-react-app`.  
+Boilerplate code for a very simple frontend that uses [Airtable](https://airtable.com/) as a CMS. Built using `create-react-app`.  
 
 Read more about the Airtable API [here](https://airtable.com/api).
+
+This is barebones, and it simply fetches and displays the data in a table as cleanly as possible.
 
 ## How to run locally
 
