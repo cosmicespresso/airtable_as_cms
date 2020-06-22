@@ -1,17 +1,19 @@
 ## Airtable as CMS
 
-Boilerplate code for a very simple frontend that uses [Airtable](https://airtable.com/) as a CMS. Built using `create-react-app`.  
+Boilerplate code for a very simple frontend that uses [Airtable](https://airtable.com/) as a CMS. Built using `create-react-app`. It simply fetches and displays the data along with the column headers.
 
-Read more about the Airtable API [here](https://airtable.com/api).
+### Airtable view
+![airtable](airtable.png)
 
-This is barebones, and it simply fetches and displays the data in a table as cleanly as possible.
+### Frontend view
+![frontend](frontend.png)
 
 ## How to run locally
 
 `yarn install` and `yarn start`
 
 
-You have to create a `.env` file in the root directory, in which you will list the following parameters: 
+In order to authenticate to Airtable API, you have to create a `.env` file in the root directory, in which you will list the following parameters: 
 
 ```
 REACT_APP_AIRTABLE_API_KEY=YOUR_AIRTABLE_KEY
@@ -20,7 +22,9 @@ REACT_APP_AIRTABLE_BASE=YOUR_AIRTABLE_BASE_ID
 REACT_APP_AIRTABLE_TABLE=YOUR_AIRTABLE_TAB_NAME
 ```
 
-If you change the details above, you need to restart your server.
+If you change the details above, you need to restart your server. 
+
+Read more about the Airtable API [here](https://airtable.com/api).
 
 ## How to style
 I have created some very simple layout and sizing classes in `App.css`. The table is built with flexbox, so it should respond quite well to responsive environments. 
