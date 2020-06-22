@@ -14,6 +14,7 @@ function App() {
   
   const [airtableData, setAirtableData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [headers, setHeaders] = useState([])
 
   useEffect(()=>{
     fetch(`${airtable_api_url}/${airtable_base}/${airtable_table}`, {
@@ -26,10 +27,26 @@ function App() {
     setIsLoading(false);
   },[])
 
+  useEffect(()=>{
+    // read headers
+    if (airtableData.length > 0) {
+      let headers = Object.keys(airtableData[0].fields)
+      setHeaders(headers);
+    }
+  },[airtableData])
+
 
   return (
     <div className="App">
-      <header>Entries</header>
+      
+      <div className="headers">
+        {headers !== undefined && headers.map( (header, i) => {
+          return (
+              <header key={i}>{header}</header>
+            )
+         })
+        }  
+      </div>
 
       <div className="entries">
         {isLoading && <div>Loading....</div>}
